@@ -6,10 +6,12 @@ function App() {
 			<Input
 				id='name'
 				label='Your name'
+				type='text'
 			/>
 			<Input
 				id='age'
 				label='Your age'
+				type='number'
 			/>
 		</main>
 	);

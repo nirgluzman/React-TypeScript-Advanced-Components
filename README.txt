@@ -15,3 +15,10 @@ npm install
 
 TypeScript - tsconfig.json
 (*) Strict Mode, https://dev.to/jsdev/strict-mode-typescript-j8p
+
+
+
+ComponentPropsWithoutRef - for props spreading.
+grab all the native attributes of an HTML element as the props type of your component.
+https://stackoverflow.com/questions/73049726/what-is-react-componentpropswithoutref-for-react-typescript
+https://mortenbarklund.com/blog/react-typescript-props-spread/
