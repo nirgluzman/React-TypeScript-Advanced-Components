@@ -33,8 +33,7 @@ function App() {
 			<p>
 				<Button2 href='https://google.com'>A Link</Button2>
 			</p>
-			<Container as='button' />
-			<Container as={Button1} />
+			<Container as={Button1}>Click me!</Container>
 		</main>
 	);
 }
