@@ -1,5 +1,5 @@
 import Input from './components/Input';
-import Button from './components/Button';
+import Button1 from './components/Button1';
 
 function App() {
 	return (
@@ -16,14 +16,14 @@ function App() {
 			/>
 
 			<p>
-				<Button el='button'>a Button</Button>
+				<Button1 el='button'>a Button</Button1>
 			</p>
 			<p>
-				<Button
+				<Button1
 					el='anchor'
 					href='https://google.com'>
 					A Link
-				</Button>
+				</Button1>
 			</p>
 		</main>
 	);
