@@ -1,5 +1,6 @@
 import Input from './components/Input';
 import Button1 from './components/Button1';
+import Button2 from './components/Button2';
 
 function App() {
 	return (
@@ -24,6 +25,12 @@ function App() {
 					href='https://google.com'>
 					A Link
 				</Button1>
+			</p>
+			<p>
+				<Button2>a Button</Button2>
+			</p>
+			<p>
+				<Button2 href='https://google.com'>A Link</Button2>
 			</p>
 		</main>
 	);

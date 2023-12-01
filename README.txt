@@ -13,12 +13,18 @@ npm create vite@latest react-ts-basic
 npm install
 
 
-TypeScript - tsconfig.json
+*) TypeScript - tsconfig.json
 (*) Strict Mode, https://dev.to/jsdev/strict-mode-typescript-j8p
 
 
 
-ComponentPropsWithoutRef - for props spreading.
+*) ComponentPropsWithoutRef - for props spreading.
 grab all the native attributes of an HTML element as the props type of your component.
 https://stackoverflow.com/questions/73049726/what-is-react-componentpropswithoutref-for-react-typescript
 https://mortenbarklund.com/blog/react-typescript-props-spread/
+
+
+
+*) Type Predicate
+Type assertion that checks if an object has a specific property or set of properties. 
+This allows TypeScript to narrow (or refine) the type of an object based on the result of the function.
