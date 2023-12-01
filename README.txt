@@ -28,3 +28,8 @@ https://mortenbarklund.com/blog/react-typescript-props-spread/
 *) Type Predicate
 Type assertion that checks if an object has a specific property or set of properties. 
 This allows TypeScript to narrow (or refine) the type of an object based on the result of the function.
+
+
+*) Polymorphic component - wraper component to dynamically change its rendered element based on a prop.
+Enable customization of the underlying element (e.g., button, a, or div) while preserving the correct type for ref and other props. 
+The most common use case when this is handy is a button that could render a or abutton element depending on what props are passed.

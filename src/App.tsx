@@ -1,6 +1,7 @@
 import Input from './components/Input';
 import Button1 from './components/Button1';
 import Button2 from './components/Button2';
+import Container from './components/Container';
 
 function App() {
 	return (
@@ -32,6 +33,8 @@ function App() {
 			<p>
 				<Button2 href='https://google.com'>A Link</Button2>
 			</p>
+			<Container as='button' />
+			<Container as={Button1} />
 		</main>
 	);
 }
