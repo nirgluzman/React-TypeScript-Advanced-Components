@@ -33,7 +33,13 @@ function App() {
 			<p>
 				<Button2 href='https://google.com'>A Link</Button2>
 			</p>
-			<Container as={Button1}>Click me!</Container>
+			<Container
+				as={Button1}
+				el='button'
+				onClick={() => {}}>
+				Click me!
+			</Container>
+			<Container as='button'>Hello!</Container>
 		</main>
 	);
 }
