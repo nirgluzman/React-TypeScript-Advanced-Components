@@ -11,7 +11,7 @@ import List from './components/List';
 import Form from './components/Form';
 
 function App() {
-	const input = useRef<HTMLInputElement>(null); // the ref decalred here is meant to be connected to HTMLInputElement.
+	const input = useRef<HTMLInputElement>(null); // the 'ref' decalred here is meant to be connected to HTMLInputElement.
 
 	function HeartIcon() {
 		return <span>❤️</span>;
@@ -25,8 +25,18 @@ function App() {
 	const hobbies = ['Sports', 'Reading', 'Cooking'];
 
 	function handleSave(data: unknown) {
-		const extractedData = data as {name: string; age: string};
-		console.log(extractedData);
+		//
+		// // implementation with 'as' keyword for "Type Casting" - "tell" TypeScript that a value is of a specific type.
+		// const extractedData = data as {name: string; age: string};
+		// console.log('Form data submitted:', extractedData);
+		//
+		// implementation with "Type Guards" for "Type Narrowing".
+		if (!data || typeof data !== 'object' || !('name' in data) || !('age' in data)) {
+			return;
+		}
+		// at this point, TypeScript knows that data MUST BE an object with a 'name' and 'age' properties.
+		// otherwise, the previous 'if' statement would have returned;
+		console.log('Form data submitted:', data);
 	}
 
 	return (
