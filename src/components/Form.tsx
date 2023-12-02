@@ -1,6 +1,6 @@
 // Wrapper component to 'form' element.
 
-import {type ComponentPropsWithoutRef, type FormEvent} from 'react';
+import {useRef, type ComponentPropsWithoutRef, type FormEvent} from 'react';
 
 // FormProps contains all the props accepted by 'form' element.
 type FormProps = ComponentPropsWithoutRef<'form'> & {
@@ -8,6 +8,8 @@ type FormProps = ComponentPropsWithoutRef<'form'> & {
 };
 
 export default function Form({onSave, children, ...otherProps}: FormProps) {
+	const form = useRef<HTMLFormElement>(null);
+
 	function handleSubmit(event: FormEvent<HTMLFormElement>) {
 		event.preventDefault();
 
@@ -16,11 +18,13 @@ export default function Form({onSave, children, ...otherProps}: FormProps) {
 		const formData = new FormData(event.currentTarget);
 		const data = Object.fromEntries(formData);
 		onSave(data);
+		form.current?.reset(); // reset the form
 	}
 
 	return (
 		<form
 			onSubmit={handleSubmit}
+			ref={form}
 			{...otherProps}>
 			{children}
 		</form>
