@@ -9,9 +9,12 @@ import Card from './components/Card';
 import IconButton from './components/IconButton';
 import List from './components/List';
 import Form from './components/Form';
+import FormWithRef, {type FormHandle} from './components/FromWithRef';
 
 function App() {
 	const input = useRef<HTMLInputElement>(null); // the 'ref' decalred here is meant to be connected to HTMLInputElement.
+
+	const customForm = useRef<FormHandle>(null);
 
 	function HeartIcon() {
 		return <span>❤️</span>;
@@ -37,6 +40,12 @@ function App() {
 		// at this point, TypeScript knows that data MUST BE an object with a 'name' and 'age' properties.
 		// otherwise, the previous 'if' statement would have returned;
 		console.log('Form data submitted:', data);
+	}
+
+	function handleSaveWithRef(data: unknown) {
+		const extractedData = data as {name: string; age: string};
+		console.log('Form data submitted:', extractedData);
+		customForm.current?.clear();
 	}
 
 	return (
@@ -137,6 +146,24 @@ function App() {
 					<Button2>Save</Button2>
 				</p>
 			</Form>
+
+			<FormWithRef
+				onSave={handleSaveWithRef}
+				ref={customForm}>
+				<Input
+					type='text'
+					label='Name'
+					id='name'
+				/>
+				<Input
+					type='number'
+					label='Age'
+					id='age'
+				/>
+				<p>
+					<Button2>Save</Button2>
+				</p>
+			</FormWithRef>
 		</main>
 	);
 }
