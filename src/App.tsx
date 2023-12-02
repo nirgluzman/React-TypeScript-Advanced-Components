@@ -43,7 +43,10 @@ function App() {
 	}
 
 	function handleSaveWithRef(data: unknown) {
-		const extractedData = data as {name: string; age: string};
+		const extractedData = data as {
+			name: string;
+			age: string; // all data extracted from 'form' have the type string; setting the type='number' just limits the valid values we can enter.
+		};
 		console.log('Form data submitted:', extractedData);
 		customForm.current?.clear();
 	}
