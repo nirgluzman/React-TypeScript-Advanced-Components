@@ -8,6 +8,7 @@ import Container from './components/Container';
 import Card from './components/Card';
 import IconButton from './components/IconButton';
 import List from './components/List';
+import Form from './components/Form';
 
 function App() {
 	const input = useRef<HTMLInputElement>(null); // the ref decalred here is meant to be connected to HTMLInputElement.
@@ -105,6 +106,22 @@ function App() {
 					renderItem={(hobby) => <li key={hobby}>{hobby}</li>}
 				/>
 			</section>
+
+			<Form>
+				<Input
+					type='text'
+					label='Name'
+					id='name'
+				/>
+				<Input
+					type='number'
+					label='Age'
+					id='age'
+				/>
+				<p>
+					<Button2>Save</Button2>
+				</p>
+			</Form>
 		</main>
 	);
 }
