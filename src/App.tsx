@@ -1,4 +1,7 @@
+import {useRef} from 'react';
+
 import Input from './components/Input';
+import InputWithRef from './components/InputWithRef';
 import Button1 from './components/Button1';
 import Button2 from './components/Button2';
 import Container from './components/Container';
@@ -7,6 +10,8 @@ import IconButton from './components/IconButton';
 import List from './components/List';
 
 function App() {
+	const input = useRef<HTMLInputElement>(null); // the ref decalred here is meant to be connected to HTMLInputElement.
+
 	function HeartIcon() {
 		return <span>❤️</span>;
 	}
@@ -30,6 +35,18 @@ function App() {
 				id='age'
 				label='Your age'
 				type='number'
+			/>
+
+			<Input
+				id='age'
+				label='Your age'
+				type='number'
+			/>
+
+			<InputWithRef
+				id='test'
+				label='Test'
+				ref={input}
 			/>
 
 			<p>

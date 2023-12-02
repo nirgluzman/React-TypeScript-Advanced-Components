@@ -33,3 +33,7 @@ This allows TypeScript to narrow (or refine) the type of an object based on the 
 *) Polymorphic component - wraper component to dynamically change its rendered element based on a prop.
 Enable customization of the underlying element (e.g., button, a, or div) while preserving the correct type for ref and other props. 
 The most common use case when this is handy is a button that could render a or abutton element depending on what props are passed.
+
+
+*) forwardRef 
+It is a function used to pass the 'ref' to a child component, https://react.dev/reference/react/forwardRef
