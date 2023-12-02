@@ -1,6 +1,7 @@
 // Card component which has multiple "slots" for content:
 // Main slot -> children prop
 // Actions slot -> actions prop
+// https://github.com/academind/react-typescript-course-resources/blob/main/examples/Card.tsx
 
 import {type ReactNode} from 'react';
 
