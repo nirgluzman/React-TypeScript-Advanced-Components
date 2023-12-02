@@ -13,6 +13,7 @@ export default function Input({label, id, ...props}: InputProps) {
 			<label htmlFor={id}>{label}</label>
 			<input
 				id={id}
+				name={id}
 				{...props}
 			/>
 		</p>

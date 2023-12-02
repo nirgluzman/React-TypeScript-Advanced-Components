@@ -24,6 +24,11 @@ function App() {
 
 	const hobbies = ['Sports', 'Reading', 'Cooking'];
 
+	function handleSave(data: unknown) {
+		const extractedData = data as {name: string; age: string};
+		console.log(extractedData);
+	}
+
 	return (
 		<main>
 			<Input
@@ -107,7 +112,7 @@ function App() {
 				/>
 			</section>
 
-			<Form>
+			<Form onSave={handleSave}>
 				<Input
 					type='text'
 					label='Name'
