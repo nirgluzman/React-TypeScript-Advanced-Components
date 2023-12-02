@@ -3,8 +3,13 @@ import Button1 from './components/Button1';
 import Button2 from './components/Button2';
 import Container from './components/Container';
 import Card from './components/Card';
+import IconButton from './components/IconButton';
 
 function App() {
+	function HeartIcon() {
+		return <span>❤️</span>;
+	}
+
 	return (
 		<main>
 			<Input
@@ -53,6 +58,12 @@ function App() {
 				actions={<button onClick={() => console.log('Button clicked!')}>Click Me!</button>}>
 				<p>Some content</p>
 			</Card>
+
+			<IconButton
+				icon={HeartIcon}
+				onClick={() => console.log('Button clicked!')}>
+				Like
+			</IconButton>
 		</main>
 	);
 }
