@@ -7,6 +7,11 @@ type FormProps = ComponentPropsWithoutRef<'form'> & {
 	onSave: (value: unknown) => void;
 };
 
+// ComponentPropsWithoutRef is used to grab all the native attributes of an HTML element as the props type of our component.
+// 'children' is an one of the inherited properties of ComponentPropsWithoutRef.
+// note that, if 'children' property is defined in FormProps, then Typescript displays an error if we do not pass any children to the component.
+
+
 export default function Form({onSave, children, ...otherProps}: FormProps) {
 	const form = useRef<HTMLFormElement>(null);
 
@@ -26,7 +31,7 @@ export default function Form({onSave, children, ...otherProps}: FormProps) {
 			onSubmit={handleSubmit}
 			ref={form}
 			{...otherProps}>
-			{children}
+			{children} 
 		</form>
 	);
 }

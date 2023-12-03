@@ -21,10 +21,12 @@ npm install
 
 
 *) ComponentPropsWithoutRef - for props spreading.
-grab all the native attributes of an HTML element as the props type of your component.
+Grab all the native attributes of an HTML element as the props type of our component.
+Note that, 'children' is an one of the inherited properties of ComponentPropsWithoutRef.
+If we include 'children' property in Props, then Typescript displays an error if we do not pass any children to the component.
+https://www.udemy.com/course/react-typescript-the-practical-guide/learn/lecture/40470756#questions/20930864
 https://stackoverflow.com/questions/73049726/what-is-react-componentpropswithoutref-for-react-typescript
 https://mortenbarklund.com/blog/react-typescript-props-spread/
-
 
 
 *) Type Predicate
